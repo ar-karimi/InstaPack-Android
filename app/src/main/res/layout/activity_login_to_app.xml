@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMainBackground"
+    android:layoutDirection="rtl"
+    android:id="@+id/constraint_layout"
+    tools:context=".LoginSignUp.LoginToApp.LoginToAppActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:lineSpacingExtra="5dp"
+        android:text="لطفا شماره موبایل خود را برای ورود به اینستاپک وارد و پس از آن دکمه مرحله بعد را لمس نمایید"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        tools:ignore="HardcodedText" />
+
+    <carbon.widget.FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="@dimen/_235sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@color/colorSecondaryBackground"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        app:carbon_cornerRadius="10dp"
+        app:carbon_stroke="@color/colorPrimary"
+        app:carbon_strokeWidth="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.055">
+
+        <EditText
+            android:id="@+id/phone_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorTransparent"
+            android:ems="10"
+            android:hint="09 - - - - - - - - -"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhiteWithTransparency"
+            android:textDirection="ltr"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="Autofill,HardcodedText" />
+
+    </carbon.widget.FrameLayout>
+
+    <carbon.widget.Button
+        android:id="@+id/submit_button"
+        android:layout_width="@dimen/_235sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/background_primary_gradient"
+        android:text="مرحله بعد"
+        android:textSize="@dimen/_12ssp"
+        app:carbon_cornerRadius="10dp"
+        app:carbon_elevation="7dp"
+        app:carbon_elevationShadowColor="#1FE3BD"
+        app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.08"
+        tools:ignore="HardcodedText" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/submit_button"
+        app:layout_constraintEnd_toEndOf="@+id/submit_button"
+        app:layout_constraintStart_toStartOf="@+id/submit_button"
+        app:layout_constraintTop_toTopOf="@+id/submit_button" />
+
+    <LinearLayout
+        android:layout_width="@dimen/_235sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit_button"
+        app:layout_constraintVertical_bias="0.042">
+
+        <carbon.widget.Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_weight="0.5"
+            android:background="@color/colorMainBackground"
+            android:text="حریم شخصی"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12ssp"
+            app:carbon_cornerRadius="10dp"
+            app:carbon_stroke="@color/colorPrimary"
+            app:carbon_strokeWidth="1dp"
+            app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <carbon.widget.Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_weight="0.5"
+            android:background="@color/colorMainBackground"
+            android:text="شرایط و قوانین"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12ssp"
+            app:carbon_cornerRadius="10dp"
+            app:carbon_stroke="@color/colorPrimary"
+            app:carbon_strokeWidth="1dp"
+            app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+    </LinearLayout>
+
+</carbon.widget.ConstraintLayout>

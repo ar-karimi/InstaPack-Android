@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMainBackground"
+    android:layoutDirection="rtl"
+    android:id="@+id/constraint_layout"
+    tools:context=".LoginSignUp.ValidateMobile.ValidateMobileActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:lineSpacingExtra="5dp"
+        android:text="لطفا کد تایید ارسال شده به شماره موبایل خود را وارد نمایید"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        tools:ignore="HardcodedText" />
+
+    <carbon.widget.FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="@dimen/_235sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@color/colorSecondaryBackground"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        app:carbon_cornerRadius="10dp"
+        app:carbon_stroke="@color/colorPrimary"
+        app:carbon_strokeWidth="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.055">
+
+        <EditText
+            android:id="@+id/phone_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:enabled="false"
+            android:background="@color/colorTransparent"
+            android:ems="10"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textDirection="ltr"
+            android:textSize="@dimen/_12ssp"
+            android:text="09121234567"
+            tools:ignore="Autofill,HardcodedText" />
+
+    </carbon.widget.FrameLayout>
+
+    <carbon.widget.FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="@dimen/_235sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@color/colorSecondaryBackground"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        app:carbon_cornerRadius="10dp"
+        app:carbon_stroke="@color/colorPrimary"
+        app:carbon_strokeWidth="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout1"
+        app:layout_constraintVertical_bias="0.04">
+
+        <EditText
+            android:id="@+id/code_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorTransparent"
+            android:ems="10"
+            android:hint="کد تایید"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhiteWithTransparency"
+            android:textDirection="ltr"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="Autofill,HardcodedText" />
+
+    </carbon.widget.FrameLayout>
+
+    <carbon.widget.Button
+        android:id="@+id/submit_button"
+        android:layout_width="@dimen/_235sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/background_primary_gradient"
+        android:text="تایید کد"
+        android:textSize="@dimen/_12ssp"
+        app:carbon_cornerRadius="10dp"
+        app:carbon_elevation="7dp"
+        app:carbon_elevationShadowColor="#1FE3BD"
+        app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintVertical_bias="0.08"
+        tools:ignore="HardcodedText" />
+
+    <ProgressBar
+        android:id="@+id/submit_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/submit_button"
+        app:layout_constraintEnd_toEndOf="@+id/submit_button"
+        app:layout_constraintStart_toStartOf="@+id/submit_button"
+        app:layout_constraintTop_toTopOf="@+id/submit_button" />
+
+
+    <LinearLayout
+        android:layout_width="@dimen/_235sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit_button"
+        app:layout_constraintVertical_bias="0.042"
+        android:baselineAligned="false">
+
+        <carbon.widget.FrameLayout
+            android:id="@+id/resend_code_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_weight="0.5"
+            android:background="@color/colorTransparent"
+            app:carbon_cornerRadius="10dp"
+            app:carbon_stroke="@color/colorPrimaryWithTransparency"
+            app:carbon_rippleRadius="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:carbon_strokeWidth="1dp"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/resend_code_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ارسال مجدد کد"
+                app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                tools:ignore="HardcodedText,MissingPrefix" />
+
+            <cn.iwgang.countdownview.CountdownView
+                android:id="@+id/countdown_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isShowDay="false"
+                app:isShowHour="false"
+                app:isShowMillisecond="false"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:isTimeTextBold="true"
+                android:layout_gravity="center"
+                app:timeTextColor="@color/colorPrimaryWithTransparency"
+                app:suffixTextColor="#80FFFFFF"
+                app:timeTextSize="14sp" />
+
+            <ProgressBar
+                android:id="@+id/resend_code_progress_bar"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </carbon.widget.FrameLayout>
+
+        <carbon.widget.FrameLayout
+            android:id="@+id/change_phone_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_weight="0.5"
+            android:background="@color/colorTransparent"
+            app:carbon_cornerRadius="10dp"
+            app:carbon_stroke="@color/colorPrimary"
+            app:carbon_rippleRadius="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:carbon_strokeWidth="1dp"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="تغییر شماره"
+                app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                tools:ignore="HardcodedText,MissingPrefix" />
+
+        </carbon.widget.FrameLayout>
+
+    </LinearLayout>
+
+</carbon.widget.ConstraintLayout>

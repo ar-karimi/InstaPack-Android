@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1FE3BD</color>
+    <color name="colorPrimaryDark">#142A3B</color>
+    <color name="colorAccent">#FF2176</color>
+
+    <color name="colorPrimaryWithTransparency">#4D1FE3BD</color> <!--with 30% transparency-->
+    <color name="colorSecondary">#FF2176</color>
+
+    <color name="colorMainBackground">#142A3B</color>
+    <color name="colorSecondaryBackground">#242B36</color>
+
+    <color name="colorTransparent">@android:color/transparent</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteWithTransparency">#4DFFFFFF</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorToastBackground">#142A3B</color>
+    <color name="colorToastText">#FF2176</color>
+    <color name="colorToastStroke">#FF2176</color>
+
+    <color name="colorToolbarBackground">#0CFFFFFF</color>
+
+    ////////////////////////////////////////
+    <color name="colorGrayText">#7e7e7e</color>
+    <color name="colorLoadingViewBackground">#CDFFFFFF</color>
+
+</resources>

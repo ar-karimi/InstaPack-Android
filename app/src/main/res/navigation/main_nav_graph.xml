@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <action
+        android:id="@+id/action_to_mainActivity"
+        app:destination="@id/mainActivity" />
+
+    <action
+        android:id="@+id/action_to_homeFragment"
+        app:destination="@id/homeFragment" />
+
+    <action
+        android:id="@+id/action_to_tutorialFragment"
+        app:destination="@id/tutorialFragment" />
+
+    <action
+        android:id="@+id/action_to_getCreditFragment"
+        app:destination="@id/getCreditFragment" />
+
+    <action
+        android:id="@+id/action_to_comingSoonFragment"
+        app:destination="@id/comingSoonFragment" />
+
+    <action
+        android:id="@+id/action_to_profileFragment"
+        app:destination="@id/profileFragment" />
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="ir.instapack.android.services.main.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ir.instapack.android.services.main.homeTab.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_searchUserActivity"
+            app:destination="@id/searchUserActivity" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tutorialFragment"
+        android:name="ir.instapack.android.services.main.tutorialTab.TutorialFragment"
+        android:label="TutorialFragment"
+        tools:layout="@layout/fragment_tutorial"/>
+
+    <fragment
+        android:id="@+id/getCreditFragment"
+        android:name="ir.instapack.android.services.main.getCreditTab.GetCreditFragment"
+        android:label="GetCreditFragment"
+        tools:layout="@layout/fragment_get_credit"/>
+
+    <fragment
+        android:id="@+id/comingSoonFragment"
+        android:name="ir.instapack.android.services.main.comingSoonTab.ComingSoonFragment"
+        android:label="ComingSoonFragment"
+        tools:layout="@layout/fragment_coming_soon"/>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ir.instapack.android.services.main.profileTab.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+
+    <activity
+        android:id="@+id/searchUserActivity"
+        android:name="ir.instapack.android.services.searchUser.SearchUserActivity"
+        android:label="activity_search_user"
+        tools:layout="@layout/activity_search_user" />
+
+</navigation>

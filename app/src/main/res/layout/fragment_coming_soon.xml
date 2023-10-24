@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="ir.instapack.android.services.main.comingSoonTab.ComingSoonViewModel" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMainBackground">
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <carbon.widget.Button
+                android:layout_width="@dimen/_235sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:background="@drawable/background_primary_gradient"
+                android:text="به زودی"
+                android:textSize="@dimen/_12ssp"
+                app:carbon_cornerRadius="10dp"
+                app:carbon_elevation="7dp"
+                app:carbon_elevationShadowColor="#1FE3BD"
+                app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+                tools:ignore="HardcodedText" />
+
+        </carbon.widget.LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

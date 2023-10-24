@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_search_user.xml",
+        "source": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\src\\main\\res\\layout\\item_search_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_search_user.xml",
+        "source": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\src\\main\\res\\layout\\activity_search_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_coming_soon.xml",
+        "source": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\src\\main\\res\\layout\\fragment_coming_soon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_get_credit.xml",
+        "source": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\src\\main\\res\\layout\\fragment_get_credit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tutorial.xml",
+        "source": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\src\\main\\res\\layout\\fragment_tutorial.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\Alireza\\AndroidStudioProjects\\InstaPack\\app\\src\\main\\res\\layout\\fragment_profile.xml"
+    }
+]

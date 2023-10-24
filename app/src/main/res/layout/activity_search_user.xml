@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="ir.instapack.android.services.searchUser.SearchUserViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMainBackground"
+        android:layoutDirection="rtl"
+        tools:context=".services.searchUser.SearchUserActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionBarSize"
+            android:background="@color/colorToolbarBackground"
+            app:elevation="0dp">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/instapack_logo"
+                tools:ignore="ContentDescription" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <carbon.widget.LinearLayout
+                android:layout_width="@dimen/_235sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@color/colorSecondaryBackground"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                app:carbon_cornerRadius="10dp"
+                app:carbon_stroke="@color/colorPrimary"
+                app:carbon_strokeWidth="0.5dp"
+                android:layout_marginTop="@dimen/_30sdp"
+                tools:ignore="RtlHardcoded">
+
+                <EditText
+                    android:id="@+id/search_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:layout_gravity="center"
+                    android:background="@color/colorTransparent"
+                    android:ems="10"
+                    android:hint="صفحه مورد نظر را جستجو کنید"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhiteWithTransparency"
+                    android:textDirection="rtl"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="Autofill,HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/ic_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="0.1"
+                    app:srcCompat="@drawable/ic_search_gray"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+            </carbon.widget.LinearLayout>
+
+            <TextView
+                android:id="@+id/search_results_title"
+                fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="نتایج جستجو"
+                android:textColor="@color/colorGrayText"
+                android:textSize="@dimen/_12ssp"
+                android:visibility="gone"
+                tools:ignore="HardcodedText,MissingPrefix,RtlHardcoded" />
+
+
+            <ImageView
+                android:id="@+id/background_image"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:src="@drawable/search_background"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/search_loading_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="search_user_loading_animation.json"
+                    app:lottie_loop="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="در حال جستجو"
+                    android:textColor="@color/colorGrayText"
+                    android:textSize="@dimen/_11ssp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/no_item_exist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:text="خدمتی با این عنوان یافت نشد !"
+                android:textColor="@color/colorGrayText"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_search_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_4sdp"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

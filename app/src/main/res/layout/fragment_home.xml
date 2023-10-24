@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="ir.instapack.android.services.main.homeTab.HomeViewModel" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMainBackground"
+        android:paddingBottom="@dimen/_60sdp"
+        android:clipToPadding="false"
+        android:layoutDirection="rtl">
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_13sdp"
+                        android:text="میزان اعتبار شما"
+                        android:textColor="#C7C7C7"
+                        android:textSize="@dimen/_12sdp"
+                        app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        tools:ignore="RtlHardcoded,UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/_17sdp"
+                            android:layout_height="@dimen/_17sdp"
+                            android:src="@drawable/ic_credit"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:text="500 سکه"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <carbon.widget.FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_140sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_13sdp"
+                        android:background="#FF0090"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:carbon_cornerRadius="14dp"
+                        app:carbon_elevation="5dp"
+                        tools:ignore="RtlHardcoded" >
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/bg_card_corner_icon"
+                            android:layout_gravity="left"
+                            android:paddingLeft="9dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="16dp"
+                            android:src="@drawable/ic_bike" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Post"
+                                app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_15sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="دانلود پست"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_11sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="کپی کپشن"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_11sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="پست مجدد (ری‌پست)"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_11sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+                        </LinearLayout>
+
+                    </carbon.widget.FrameLayout>
+
+                    <carbon.widget.FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_140sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_13sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="#054FA4"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:carbon_cornerRadius="14dp"
+                        app:carbon_elevation="5dp"
+                        tools:ignore="RtlHardcoded" >
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/bg_card_corner_icon"
+                            android:layout_gravity="left"
+                            android:paddingLeft="9dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="16dp"
+                            android:src="@drawable/ic_igtv" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="IGTV"
+                                app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_15sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="دانلود Igtv"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_11sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+
+                        </LinearLayout>
+
+                    </carbon.widget.FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <carbon.widget.FrameLayout
+                        android:id="@+id/cv_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_140sdp"
+                        android:layout_marginLeft="@dimen/_13sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="#00CCFF"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:carbon_cornerRadius="14dp"
+                        app:carbon_elevation="5dp"
+                        tools:ignore="RtlHardcoded" >
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/bg_card_corner_icon"
+                            android:layout_gravity="left"
+                            android:paddingLeft="9dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="16dp"
+                            android:src="@drawable/ic_face" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Profile"
+                                app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_15sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="دانلود عکس پروفایل"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_11sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="کپی بایو (بیوگرافی)"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_11sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+                        </LinearLayout>
+
+                    </carbon.widget.FrameLayout>
+
+                    <carbon.widget.FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_140sdp"
+                        android:layout_marginLeft="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="#D2A905"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:carbon_cornerRadius="14dp"
+                        app:carbon_elevation="5dp"
+                        tools:ignore="RtlHardcoded" >
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/bg_card_corner_icon"
+                            android:layout_gravity="left"
+                            android:paddingLeft="9dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="9dp"
+                            android:paddingBottom="16dp"
+                            android:src="@drawable/ic_bike" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Story"
+                                app:fontPath="IRANSansMobileFonts/IRANSansMobile(FaNum)_Medium.ttf"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_15sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="دانلود استوری"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_11sdp"
+                                tools:ignore="HardcodedText,MissingPrefix" />
+
+                        </LinearLayout>
+
+                    </carbon.widget.FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </carbon.widget.LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
