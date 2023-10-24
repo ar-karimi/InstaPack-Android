@@ -1,5 +1,5 @@
 # InstaPack
-An incomplete project of Instagram tools
+An incomplete Android project of Instagram tools
 
 Using: MVVM, Rxjava, Retrofit, Eventbus, LiveData, Lottie, Fresco, Carbon
 
